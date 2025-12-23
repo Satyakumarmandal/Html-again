@@ -1,0 +1,166 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <!-- <link rel="stylesheet" href="./form.css"> -->
+     <style>
+        input{
+            width: 100%;
+            padding: 8px;
+        }
+        label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-container{
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgb(208, 240, 240);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color: blue;
+        }
+        address{
+            width: 100%;
+        }
+        @media screen and (max-width: 600px){
+            .form-container{
+                max-width: 100%;
+                margin: 10px;
+                padding: 10px;
+            }
+            
+        }
+       
+
+    
+        
+        
+     </style>
+ </head>
+ <body>
+    <div class="form-container">
+        <h2>Student Registration Form</h2>
+
+        <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="phone" id="phone" placeholder="Enter phone number">
+    </div>
+
+    <div class="form-group">
+        <label>Class</label>
+        <select>
+            <option>Select Class</option>
+            <option>10th</option>
+            <option>11th</option>
+            <option>12th</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label>
+        <div class="gender">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter address"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+        
+
+    </div>
+    
+
+    
+ </body>
+ </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Form</title>
+
+<link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+
+<div class="form-container">
+<h2>Student Registration Form</h2>
+
+<form action="https://www.googlr" method="GET" aria-autocomplete="off">
+    <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="phone" id="phone" placeholder="Enter phone number">
+    </div>
+
+    <div class="form-group">
+        <label>Class</label>
+        <select>
+            <option>Select Class</option>
+            <option>10th</option>
+            <option>11th</option>
+            <option>12th</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label>
+        <div class="gender">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter address"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+</body>
+</html>
