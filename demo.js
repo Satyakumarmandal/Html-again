@@ -36,3 +36,31 @@ let isLogIn=Number(num);
 // console.log(userObj.name); // Shreyansh
 // console.log(userObj.age + 1); // 23
 // console.log(userObj.isStudent); // true 
+// javaScript data two type permitive and non primitive
+// primitive types : number , string , boolean , null , undefined , symbol , bigInt
+// this is permitive type  called as value types and cannot changed value( immutable)
+// non primitive types : object , array , function retunen types = object
+// let age=22; //number
+// two type of mermory allocation
+// stack memory - small size data types - permitive types
+// heap memory - large size data types - non permitive types
+// stact memory example    
+let userName="satya teja"; //string
+let otherName=userName; //copy by value
+otherName="shreyansh";
+
+// console.log(userName); //satya teja
+// console.log(otherName); //shreyansh
+// Heap memory example  
+// heap memory changed ther fore both values are changed  
+// let user={
+//     name:"satya teja",
+//     age:22
+// };
+// let otherUser=user; //copy by reference
+// otherUser.name="shreyansh";
+// console.log(user.name); //shreyansh
+// console.log(otherUser.name); //shreyansh    
+
+
+
