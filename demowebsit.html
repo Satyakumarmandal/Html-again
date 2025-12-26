@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+h1 {
+    color: white;
+    font-size: 22px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar ul li {
+    margin: 0 10px;
+
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    background-color: #45a049;
+    border-radius: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+}
+
+        section {
+            padding: 20px;
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            
+        }
+        section h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        section p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="./logo.png" alt="Logo" class="logo">
+        <h1>Welcome to My Demo Website</h1>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <img src="./netflix-media-streaming-service-screen-P8E5PJ.jpg" alt="">
+    <div class="responsive-iframe">
+    <iframe src="https://www.youtube.com/embed/yY0bKZNYmJs" allowfullscreen></iframe>
+</div>
+
+<div class="responsive-iframe">
+    <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+</div>
+
+    <h2 id="home">Home Section</h2>
+    <p>This is the home section of the demo website.</p>
+
+    <h2 id="about">About Section</h2>
+    <p>This section contains information about the website.</p>
+
+    <h2 id="services">Services Section</h2>
+    <p>Details about the services offered can be found here.</p>
+
+    <h2 id="contact">Contact Section</h2>
+    <p>Get in touch with us through this section.</p>
+    
+</section>
+<section>
+    <img src="./netflix-media-streaming-service-screen-P8E5PJ.jpg" alt="">
+
+    <h2 id="home">Home Section</h2>
+    <p>This is the home section of the demo website.</p>
+
+    <h2 id="about">About Section</h2>
+    <p>This section contains information about the website.</p>
+
+    <h2 id="services">Services Section</h2>
+    <p>Details about the services offered can be found here.</p>
+
+    <h2 id="contact">Contact Section</h2>
+    <p>Get in touch with us through this section.</p>
+</section>
+
+
+</body>
+</html>
