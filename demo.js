@@ -37,9 +37,10 @@ let isLogIn=Number(num);
 // console.log(userObj.age + 1); // 23
 // console.log(userObj.isStudent); // true 
 // javaScript data two type permitive and non primitive
-// primitive types : number , string , boolean , null , undefined , symbol , bigInt
+// primitive types :Class data Number , String , Boolean , Null , Undefined , Symbol , bigInt
 // this is permitive type  called as value types and cannot changed value( immutable)
 // non primitive types : object , array , function retunen types = object
+// function return=functionobject
 // let age=22; //number
 // two type of mermory allocation
 // stack memory - small size data types - permitive types
