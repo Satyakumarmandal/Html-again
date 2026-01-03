@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Clock</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #ebe6e6;
+      }
+
+      .clock {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 0 20px rgba(201, 62, 62, 0.1);
+      }
+
+      /* Numbers */
+      .number {
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+      }
+
+      /* Digital time */
+      #time {
+        position: absolute;
+        bottom: 40px;
+        font-size: 20px;
+        color: #000;
+      }
+
+      .clock {
+        position: relative;
+        width: 300px;
+        border: 2px solid blue;
+        height: 300px;
+        border-radius: 50%;
+        background: aquamarine;
+      }
+
+      /* Common hand style */
+      .hand {
+        /* position: absolute; */
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        transform: translateX(-50% 50%) rotate(0deg);
+      }
+
+      /* Large pin (Hour hand) */
+      .hour {
+        width: 2px;
+        height: 120px;
+        background: black;
+      }
+
+      /* Medium pin (Minute hand) */
+      .minute {
+        width: 2px;
+        height: 120px;
+        background: blue;
+      }
+
+      /* Small pin (Second hand) */
+      .second {
+        width: 3px;
+        height: 70px;
+        left: 48.5%;
+        top: 40%;
+        background: red;
+      }
+
+      /* Center dot */
+      .center-dot {
+        position: absolute;
+        width: 12px;
+        height: 10px;
+        background: black;
+        border-radius: 55%;
+        top: 50%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Digital time */
+      #time {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="clock">
+      <div class="clock">
+        <!-- Numbers -->
+        <div class="number" style="top: 10px">12</div>
+        <div class="number" style="right: 75px; top: 16px">1</div>
+        <div class="number" style="right: 25px; top: 80px">2</div>
+        <div class="number" style="right: 15px">3</div>
+
+        <div class="number" style="bottom: 100px; right: 30px">4</div>
+        <div class="number" style="bottom: 40px; right: 45px">5</div>
+
+        <div class="number" style="bottom: 10px">6</div>
+                <div class="number" style="bottom: 10px">6</div>
+        <div class="number" style="bottom: 40px; left: 45px">7</div>
+        <div class="number" style="bottom: 100px; left: 30px">8</div>
+
+        <div class="number" style="left: 15px">9</div>
+        <div class="number" style="top: 80px; left: 25px">10</div>
+        <div class="number" style="top: 16px; left: 75px">11</div>
+
+
+        <!-- Clock Hands -->
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+
+        <!-- Center Dot -->
+        <div class="center-dot"></div>
+
+        <!-- Digital Time -->
+        <p id="time"></p>
+      </div>
+
+      <p id="time"></p>
+    </div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
+        const hours = now.getHours();
+
+        const secondDeg = seconds * 6;
+        const minuteDeg = minutes * 6;
+        const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+
+        document.getElementById(
+          "second"
+        ).style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+
+        document.getElementById(
+          "minute"
+        ).style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+
+        document.getElementById(
+          "hour"
+        ).style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+
+        document.getElementById("time").innerText = now.toLocaleTimeString();
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
+</html>
