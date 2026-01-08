@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fast Zomato under 5 Min</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eed8d8;
+}
+
+/* HEADER */
+header {
+  background-color: #ec2a07;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+form,input,label{
+  display: flex;
+  color: white;
+  gap: 10px;
+  width: auto;
+}
+
+
+/* LOGO */
+.logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SEARCH */
+.search-box input {
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+}
+button{
+  padding: 8px 12px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #bd877e;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* HERO SECTION */
+section {
+  height: 400px;
+  background: url("./image/hero.jpg") no-repeat center/cover;
+  text-align: center;
+  padding-top: 80px;
+}
+
+section h2 {
+  font-size: 36px;
+  color: #ec2a07;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="./image/log.jpg" alt="logo">
+  </div>
+
+  <h2>Fast Zomato</h2>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <form action=""> 
+      <label for="username"> UserName </label>
+      <input type="text" placeholder="Enter UserName" id="username" name="username" required>
+    <label for="password"> Password </label>
+    <input type="text" placeholder="Enter Password" id="password" name="password" required>
+    </form>
+
+  <div class="search-box">
+    
+    <input type="text" placeholder="Search food">
+    <button> Search</button>
+  </div>
+</header>
+
+<section>
+  <h2>Welcome to Fast Zomato!</h2>
+  <p>Food delivered in under 5 minutes</p>
+</section>
+
+</body>
+</html>

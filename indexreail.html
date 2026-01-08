@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRCTC Mini | Home</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #0a3d62;
+  color: white;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Search Box */
+.search-box {
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.search-box h2 {
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-form input,
+.search-form button {
+  padding: 10px;
+  flex: 1;
+}
+
+.search-form button {
+  background: #0a3d62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.service-card {
+  background: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0a3d62;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .banner img {
+    height: 150px;
+  }
+
+  .banner-text {
+    left: 5%;
+    font-size: 14px;
+  }
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="data:image/jpeg;base64,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" alt="Train Logo" class="logo">
+    <h1>IRCTC Mini</h1>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="images/banner.jpg" alt="Indian Railway Banner">
+    <div class="banner-text">
+      <h2>Book Train Tickets Easily</h2>
+      <p>Indian Railway Reservation System</p>
+    </div>
+  </section>
+
+  <!-- Search Train -->
+  <section class="search-box">
+    <h2>Search Trains</h2>
+    <form class="search-form">
+      <input type="text" placeholder="From Station">
+      <input type="text" placeholder="To Station">
+      <input type="date">
+      <button type="button">Search</button>
+    </form>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="service-card">
+      <img src="images/train.jpg" alt="">
+      <p>Book Ticket</p>
+    </div>
+    <div class="service-card">
+      <img src="images/train.jpg" alt="">
+      <p>PNR Status</p>
+    </div>
+    <div class="service-card">
+      <img src="images/train.jpg" alt="">
+      <p>Live Train</p>
+    </div>
+    <div class="service-card">
+      <img src="images/train.jpg" alt="">
+      <p>Cancel Ticket</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 IRCTC Mini | Indian Railways</p>
+  </footer>
+
+</body>
+</html>
